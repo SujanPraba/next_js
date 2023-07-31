@@ -40,6 +40,10 @@ export default function Home() {
                 <td class="py-2 px-4 border">Button With Sliding Card</td>
                 <td class="py-2 px-4 border">/buttoncard</td>
               </tr>
+              <tr class="bg-white">
+                <td class="py-2 px-4 border">Pricing Table with Responsive</td>
+                <td class="py-2 px-4 border">/Pricing</td>
+              </tr>
               {/* <!-- Add more rows as needed --> */}
             </tbody>
           </table>
