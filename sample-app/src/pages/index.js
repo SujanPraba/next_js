@@ -24,6 +24,22 @@ export default function Home() {
                 <td class="py-2 px-4 border">Form</td>
                 <td class="py-2 px-4 border">/form</td>
               </tr>
+              <tr class="bg-white">
+                <td class="py-2 px-4 border">Image Zoon in out with Tabbar</td>
+                <td class="py-2 px-4 border">/imgzoom</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="py-2 px-4 border">Side Tab with Condent Change In left</td>
+                <td class="py-2 px-4 border">/sidetab</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="py-2 px-4 border">changing image button and condent</td>
+                <td class="py-2 px-4 border">/imgcont</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="py-2 px-4 border">Button With Sliding Card</td>
+                <td class="py-2 px-4 border">/buttoncard</td>
+              </tr>
               {/* <!-- Add more rows as needed --> */}
             </tbody>
           </table>
