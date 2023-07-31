@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-// import menubar from "../public/icons/menubar.svg";
-// import navarrow from "../public/icons/nav-arrow.svg";
-// import headerIcon from "../public/icons/headerIcon.svg";
+import menubar from "../public/icons/menubar.svg";
+import navarrow from "../public/icons/nav-arrow.svg";
+import headerIcon from "../public/icons/headerIcon.svg";
 import { useState } from "react";
 import { useRouter } from "next/router";
 function NavLink({ to, children }) {
@@ -74,7 +74,7 @@ function MobileNav({ open, setOpen }) {
               }}
             >
               <button className="w-[50px]  -mt-[15px]">
-                {/* <Image src={headerIcon} alt="navbutton" /> */}
+                <Image src={headerIcon} alt="navbutton" />
               </button>
               <span
                 className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
@@ -121,55 +121,6 @@ function MobileNav({ open, setOpen }) {
           >
             Services
           </Link>
-          <div className="flex flex-col pl-[20px] mt-4">
-            <Link
-              className="text-xl font-medium mt-1 mb-2"
-              href="/devops"
-              onClick={() =>
-                setTimeout(() => {
-                  setOpen(!open);
-                }, 100)
-              }
-            >
-              DevOps Service
-            </Link>
-            <div className="w-[100%] h-[3px] bg-textprimarygrey" />
-            <Link
-              className="text-xl font-medium my-2"
-              href="/application"
-              onClick={() =>
-                setTimeout(() => {
-                  setOpen(!open);
-                }, 100)
-              }
-            >
-              Application Service
-            </Link>
-            <div className="w-[100%] h-[3px] bg-textprimarygrey" />
-            <Link
-              className="text-xl font-medium my-2"
-              href="/cloud"
-              onClick={() =>
-                setTimeout(() => {
-                  setOpen(!open);
-                }, 100)
-              }
-            >
-              Cloud Enablement
-            </Link>
-            <div className="w-[100%] h-[3px] bg-textprimarygrey" />
-            <Link
-              className="text-xl font-medium mt-2"
-              href="/qualityengineering"
-              onClick={() =>
-                setTimeout(() => {
-                  setOpen(!open);
-                }, 100)
-              }
-            >
-              Quality Engineering
-            </Link>
-          </div>
         </div>
         <div className="w-[100%] h-[3px] bg-bgPrimaryRed" />
         <Link
@@ -181,7 +132,7 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          Industries
+         Projects
         </Link>
         <div className="w-[100%] h-[3px] bg-bgPrimaryRed" />
         <Link
@@ -193,33 +144,10 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          About Us
+          Testimonials
         </Link>
         <div className="w-[100%] h-[3px] bg-bgPrimaryRed" />
-        {/* <Link
-          className="text-xl font-medium my-4"
-          href="/"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Career
-        </Link>
-        <div className="w-[100%] h-[3px] bg-bgPrimaryRed" />
-        <Link
-          className="text-xl font-medium my-4"
-          href="/"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
-        >
-          Blog
-        </Link>
-        <div className="w-[100%] h-[3px] bg-bgPrimaryRed mb-8" /> */}
+        
       </div>
     </div>
   );
@@ -242,36 +170,16 @@ export default function Header() {
       case "/service":
         document.getElementById("service").style.backgroundColor = "#e3e6ed";
         break;
-      case "/devops":
-        document.getElementById("service").style.backgroundColor = "#e3e6ed";
-        document.getElementById("devOps").style.color="#031555";
-        break;
-      case "/cloud":
-        document.getElementById("service").style.backgroundColor = "#e3e6ed";
-        document.getElementById("cloud").style.color="#031555";
-        break;
-      case "/application":
-        document.getElementById("service").style.backgroundColor = "#e3e6ed";
-        document.getElementById("application").style.color="#031555";
-
-        break;
-      case "/qualityengineering":
         document.getElementById("service").style.backgroundColor = "#e3e6ed";
         document.getElementById("qualityengineering").style.color="#031555";
         break;
-      case "/about":
-        document.getElementById("about").style.backgroundColor = "#e3e6ed";
+      case "/testimonials":
+        document.getElementById("testimonials").style.backgroundColor = "#e3e6ed";
         break;
-      case "/industries":
-        document.getElementById("industries").style.backgroundColor = "#e3e6ed";
+      case "/projects":
+        document.getElementById("projects").style.backgroundColor = "#e3e6ed";
         break;
         
-      case "/":
-        document.getElementById("industries").style.backgroundColor = "#e3e6ed";
-        break;
-      case "/":
-        document.getElementById("industries").style.backgroundColor = "#e3e6ed";
-        break;
     }
   });
 
@@ -279,7 +187,7 @@ export default function Header() {
     <header>
       <MobileNav open={open} setOpen={setOpen} />
 
-      <div className="w-full h-[100%] lg:h-11 lg:py-12 lg:w-screen  lg:bg-textWhite z-50  lg:fixed lg:top-0 lg:left-0 lg:right-0   text-black lg:text-white bg-white lg:bg-transparent">
+      <div className="w-full h-[100%] lg:h-11 lg:py-12 lg:w-screen  lg:bg-white z-50  lg:fixed lg:top-0 lg:left-0 lg:right-0   text-black lg:text-white bg-white lg:bg-transparent">
         <div className="max-w-screen-2x h-full  px-7 flex items-center justify-between">
           <div className="text-textWhite py-10">
             <svg
@@ -341,38 +249,9 @@ export default function Header() {
                   <Link href="service" className="">
                     Services
                   </Link>
-                  {/* <Image
-                    src={navarrow}
-                    alt="dropdown"
-                    className="transition-transform duration-300 group-hover:rotate-90" 
-                  /> */}
+                 
                 </button>
-                <div className="absolute -left-[45px] text-center w-[200px]   hidden  bg-[#e3e6ed] text-white py-2 mt-0 ml-2 rounded-[18px] group-hover:block transition-all duration-800 cursor-pointer">
-                  <Link
-                    href="/devops"
-                    className="block px-5 py-2 text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300 cursor-pointer" id="devOps"
-                  >
-                    DevOps Service
-                  </Link>
-                  <Link
-                    href="/application"
-                    className="block px-5 py-2 text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300 cursor-pointer" id="application"
-                  >
-                    Application Service
-                  </Link>
-                  <Link
-                    href="/cloud"
-                    className="block px-5 py-2 text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300 cursor-pointer" id="cloud"
-                  >
-                    Cloud Enablement
-                  </Link>
-                  <Link
-                    href="/qualityengineering"
-                    className="block px-5 py-2 text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300 cursor-pointer" id="qualityengineering"
-                  >
-                    Quality Engineering
-                  </Link>
-                </div>
+               
               </div>
 
               <div
@@ -381,66 +260,19 @@ export default function Header() {
               >
                 <button
                   className="text-[#031555]  text-[16px] font-medium hover:bg-[#e3e6ed] px-5 py-2 rounded-[15px]  flex items-center"
-                  id="industries"
+                  id="projects"
                 >
-                  <Link href="/industries">Industries</Link>
-                  {/* <Image
-                    src={navarrow}
-                    alt="dropdown"
-                    className="transition-transform duration-300  group-hover:rotate-90"
-                  /> */}
+                  <Link href="/industries">Projects</Link>
+                 
                 </button>
-                <div className="absolute  -left-[30px] w-[184px] transition-all duration-300  z-10 text-center hidden  bg-[#e3e6ed] text-white py-2 mt-0 ml-2 rounded-[18px] group-hover:block">
-                  <Link
-                    href="industries/#banking"
-                    className="block px-4 py-[7px] text-textprimarygrey text-[16px]  font-medium  hover:text-[#031555] transition-all duration-300"   
-                  >
-                    Banking
-                  </Link>
-                  <Link
-                    href="industries/#retail"
-                    className="block px-4 py-[7px] text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300"
-                  >
-                    Retail
-                  </Link>
-                  <Link
-                    href="industries/#engineering"
-                    className="block px-4 py-[7px] text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300"
-                  >
-                    Engineering
-                  </Link>
-                  <Link
-                    href="industries/#telecom"
-                    className="block px-4 py-[7px] text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300"
-                  >
-                    Telcom
-                  </Link>
-                  <Link
-                    href="industries/#hightech"
-                    className="block px-4 py-[7px] text-textprimarygrey text-[16px] font-medium hover:text-[#031555] transition-all duration-300"
-                  >
-                    High Technology
-                  </Link>
-                </div>
+                
               </div>
               <li
                 className="py-2 px-5 text-[16px] rounded-[15px] hover:bg-[#e3e6ed] text-[#031555] font-medium transition-all duration-300 cursor-pointer"
-                id="about"
+                id="testimonials"
               >
-                <Link href="/about">About Us</Link>
+                <Link href="/about">Testimonials</Link>
               </li>
-              {/* <li
-                className="py-2 px-5 text-[16px] rounded-[15px] hover:bg-[#e3e6ed] text-[#031555] font-medium transition-all duration-300 cursor-pointer"
-                id="career"
-              >
-                <Link href="/">Career</Link>
-              </li>
-              <li
-                className="py-2 px-5 text-[16px] rounded-[15px] hover:bg-[#e3e6ed] text-[#031555] font-medium transition-all duration-300 cursor-pointer"
-                id="blog"
-              >
-                <Link href="/">Blog</Link>
-              </li> */}
             </ul>
             <div className="">
               <Link href="#form">
@@ -459,7 +291,7 @@ export default function Header() {
               }}
             >
               <button className="w-[50px] ">
-                {/* <Image src={menubar} alt="navbutton" /> */}
+                <Image src={menubar} alt="navbutton" />
               </button>
               <span
                 className={`h-1 w-full  bg-black rounded-lg transform transition-all duration-300 ease-in-out ${

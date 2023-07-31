@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
-
-import Header from "../../../components/header"
-// import contactinformation from "../public/logos/contact-information.svg";
-// import Success from "../public/icons/check.svg";
 
 export default function Form() {
   const initialState = {
